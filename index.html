@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mounkang Souloukna - Géomaticien & Développeur SIG</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Mounkang Souloukna - Géomaticien, Développeur SIG et Formateur spécialisé en analyse spatiale, télédétection et solutions géospatiales au Tchad.">
+    <meta name="keywords" content="géomaticien, SIG, télédétection, QGIS, ArcGIS, Google Earth Engine, cartographie, analyse spatiale, Tchad, formation SIG, Mounkang Souloukna">
+    <meta name="author" content="Mounkang Souloukna">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mounkang Souloukna - Géomaticien & Développeur SIG">
+    <meta property="og:description" content="Spécialisé en analyse spatiale, modélisation d'infrastructures et développement de solutions géospatiales.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/profil.jpg"> 
+    <meta property="og:url" content="https://mounkangsouloukna.github.io">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-globe-africa"></i>
+            </div>
+            <div class="loading-text">Chargement...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Follow -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- ======================= Header & Navigation ======================= -->
+    <header role="banner" class="header">
+        <nav role="navigation" aria-label="Navigation principale" class="navbar">
+            <div class="nav-brand">
+                <a href="#accueil" aria-label="Retour à l'accueil" class="brand-link">
+                    <span class="brand-text">Mounkang</span>
+                    <span class="brand-accent">.</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#accueil" class="nav-link active">
+                        <span class="nav-text">Accueil</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#apropos" class="nav-link">
+                        <span class="nav-text">À propos</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#competences" class="nav-link">
+                        <span class="nav-text">Compétences</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">
+                        <span class="nav-text">Parcours</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projets" class="nav-link">
+                        <span class="nav-text">Projets</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#produits" class="nav-link">
+                        <span class="nav-text">Formations</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <span class="nav-text">Contact</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Changer le thème" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" id="navToggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ======================= Hero Section ======================= -->
+        <section id="accueil" class="hero">
+            <div class="hero-background">
+                <div class="bg-gradient"></div>
+                <div class="bg-pattern"></div>
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text" data-aos="fade-up">
+                        <div class="hero-greeting">
+                            <span class="wave">👋</span>
+                            Bonjour, je suis
+                        </div>
+                        <h1 class="hero-title">
+                            <span class="title-line">Mounkang</span>
+                            <span class="title-line title-accent">Souloukna</span>
+                        </h1>
+                        <div class="hero-roles">
+                            <span class="role-text">Je suis </span>
+                            <span class="typing-text" id="typingText"></span>
+                            <span class="cursor-blink">|</span>
+                        </div>
+                        <p class="hero-description">
+                            Spécialisé en analyse spatiale, modélisation d'infrastructures et développement de solutions géospatiales innovantes pour l'Afrique.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                                <div class="stat-number" data-target="50">0</div>
+                                <div class="stat-label">Projets Réalisés</div>
+                            </div>
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="stat-number" data-target="500">0</div>
+                                <div class="stat-label">Étudiants Formés</div>
+                            </div>
+                            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                                <div class="stat-number" data-target="3">0</div>
+                                <div class="stat-label">Années d'Expérience</div>
+                            </div>
+                        </div>
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#contact" class="btn btn-primary btn-glow">
+                                <span class="btn-text">Me contacter</span>
+                                <i class="fas fa-arrow-right btn-icon"></i>
+                            </a>
+                            <a href="#produits" class="btn btn-secondary">
+                                <span class="btn-text">Mes formations</span>
+                            </a>
+                            <a href="assets/documents/cv.pdf" class="btn btn-outline" download>
+                                <i class="fas fa-download"></i>
+                                <span class="btn-text">Télécharger CV</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="profile-container">
+                            <div class="profile-image">
+                                <img src="assets/images/profil.jpg" alt="Photo de profil de Mounkang Souloukna" loading="eager">
+                                <div class="profile-ring"></div>
+                                <div class="profile-glow"></div>
+                            </div>
+                            <div class="tech-icons">
+                                <div class="tech-icon tech-icon-1" data-tooltip="QGIS">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="tech-icon tech-icon-2" data-tooltip="Google Earth Engine">
+                                    <i class="fas fa-satellite"></i>
+                                </div>
+                                <div class="tech-icon tech-icon-3" data-tooltip="Python">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="tech-icon tech-icon-4" data-tooltip="JavaScript">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#apropos" aria-label="Défiler vers la section À propos" class="scroll-link">
+                        <span class="scroll-text">Découvrir</span>
+                        <div class="scroll-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= About Section ======================= -->
+        <section id="apropos" class="about">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Découvrez</span>
+                    <h2 class="section-title">À propos de moi</h2>
+                    <p class="section-subtitle">Mon parcours et ma passion pour la géomatique</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <div class="text-block">
+                            <p class="highlight-text">
+                                Passionné par la manière dont les données géographiques peuvent résoudre des problèmes concrets, je transforme des informations complexes en solutions claires et exploitables.
+                            </p>
+                            <p>
+                                En tant que Créateur de contenu éducatif, ma mission est de démocratiser l'accès aux technologies géospatiales et de renforcer les compétences en SIG et télédétection à travers des formations pratiques et accessibles, avec un focus particulier sur les contextes africains.
+                            </p>
+                            <p>
+                                Titulaire d'un Master en Géomatique appliquée de l'Université de Yaoundé 1, je suis constamment engagé dans l'innovation technologique pour proposer des solutions durables et former la nouvelle génération de géomaticiens.
+                            </p>
+                        </div>
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-satellite"></i>
+                                </div>
+                                <div class="expertise-content">
+                                    <h4>Télédétection</h4>
+                                    <p>Analyse d'images satellites et monitoring environnemental</p>
+                                </div>
+                            </div>
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-map"></i>
+                                </div>
+                                <div class="expertise-content">
+                                    <h4>SIG & Cartographie</h4>
+                                    <p>Développement de solutions géospatiales complètes</p>
+                                </div>
+                            </div>
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <div class="expertise-content">
+                                    <h4>Formation</h4>
+                                    <p>Transmission de compétences et création de contenu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-info" data-aos="fade-left">
+                        <div class="info-card glass-card">
+                            <div class="card-header">
+                                <i class="fas fa-user"></i>
+                                <h3>Informations Personnelles</h3>
+                            </div>
+                            <div class="info-list">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="info-content">
+                                        <strong>Localisation</strong>
+                                        <span>N'Djamena, Tchad</span>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div class="info-content">
+                                        <strong>Téléphone</strong>
+                                        <a href="tel:+23568275851">+235 68275851</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="info-content">
+                                        <strong>Email</strong>
+                                        <a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="availability-card glass-card">
+                            <div class="card-header">
+                                <i class="fas fa-clock"></i>
+                                <h3>Disponibilité</h3>
+                            </div>
+                            <div class="availability-status">
+                                <div class="status-indicator available"></div>
+                                <span>Disponible pour nouveaux projets</span>
+                            </div>
+                            <p>Actuellement ouvert à de nouvelles collaborations et projets passionnants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= Skills Section ======================= -->
+        <section id="competences" class="skills">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Expertise</span>
+                    <h2 class="section-title">Compétences Techniques</h2>
+                    <p class="section-subtitle">Ma boîte à outils pour transformer les données en décisions</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-map"></i>
+                            </div>
+                            <h3>SIG & Télédétection</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">QGIS</span>
+                                    <span class="skill-percentage">98%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="98%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">ArcGIS Pro & Desktop</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Google Earth Engine</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">ENVI / ERDAS</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Programmation</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python (ArcPy, GeoPandas)</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript (Leaflet, GEE)</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL / PostGIS</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Collecte de Données</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">KoboToolbox / ODK</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">QField / Input</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">ArcGIS Field Maps</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Data Science & IA</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Analyse de Données (Pandas)</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Machine Learning</span>
+                                    <span class="skill-percentage">78%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="78%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">DataViz (Power BI)</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= Experience Section ======================= -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Parcours</span>
+                    <h2 class="section-title">Mon Parcours</h2>
+                    <p class="section-subtitle">Expérience professionnelle et formation académique</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Mars 2024 - Présent</span>
+                                <div class="timeline-badge current">Actuel</div>
+                            </div>
+                            <h3>Responsable SIG & Télédétection</h3>
+                            <h4>CECISIG - Centre d'Excellence en Cartographie et SIG</h4>
+                            <p>Direction des activités de géomatique, supervision d'équipe et développement de solutions géospatiales innovantes.</p>
+                            <div class="timeline-achievements">
+                                <ul>
+                                    <li>Management d'une équipe de 5 géomaticiens</li>
+                                    <li>Développement de 15+ solutions SIG personnalisées</li>
+                                    <li>Formation de 200+ professionnels</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2022 - 2023</span>
+                                <div class="timeline-badge education">Diplôme</div>
+                            </div>
+                            <h3>Master 2 en Cartographie, Télédétection et SIG</h3>
+                            <h4>Université de Yaoundé 1, Cameroun</h4>
+                            <p>Spécialisation en Gestion Durable des Territoires, analyse spatiale avancée et modélisation.</p>
+                            <div class="timeline-achievements">
+                                <ul>
+                                    <li>Mention Très Bien (16.5/20)</li>
+                                    <li>Thèse sur l'analyse de la vulnérabilité climatique</li>
+                                    <li>Stage recherche au CIRAD</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-marker">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Janvier 2023 - Février 2024</span>
+                                <div class="timeline-badge freelance">Freelance</div>
+                            </div>
+                            <h3>Consultant Géomatique Freelance</h3>
+                            <h4>Projets Indépendants</h4>
+                            <p>Consultation spécialisée en analyse spatiale, cartographie de vulnérabilité et développement de solutions SIG.</p>
+                            <div class="timeline-achievements">
+                                <ul>
+                                    <li>20+ missions réalisées avec succès</li>
+                                    <li>Collaboration avec ONGs internationales</li>
+                                    <li>Développement d'applications web cartographiques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= Projects Section ======================= -->
+        <section id="projets" class="projects">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Réalisations</span>
+                    <h2 class="section-title">Projets Réalisés</h2>
+                    <p class="section-subtitle">Quelques réalisations marquantes en géomatique</p>
+                </div>
+                
+                <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all">
+                        <span>Tous</span>
+                    </button>
+                    <button class="filter-btn" data-filter="teledetection">
+                        <span>Télédétection</span>
+                    </button>
+                    <button class="filter-btn" data-filter="webmapping">
+                        <span>WebMapping</span>
+                    </button>
+                    <button class="filter-btn" data-filter="ia">
+                        <span>IA & Automatisation</span>
+                    </button>
+                    <button class="filter-btn" data-filter="collecte">
+                        <span>Collecte de Données</span>
+                    </button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card glass-card" data-category="collecte webmapping teledetection" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="assets/images/projects/project-securite-alimentaire.png" alt="Projet de surveillance de la sécurité alimentaire au Tchad" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="Voir le projet">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="Voir le code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Mécanisme de surveillance communautaire de la sécurité alimentaire au Tchad </h3>
+                                <div class="project-status">
+                                    <span class="status-badge in-progress">En cours</span>
+                                </div>
+                            </div>
+                            <p>Développement d'un système intégré combinant collecte de données communautaire et analyse d'images satellite pour générer des alertes précoces.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">85%</span>
+                                    <span class="metric-label">Avancement</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">12</span>
+                                    <span class="metric-label">Régions</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">1500+</span>
+                                    <span class="metric-label">Données</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">KoboToolbox</span>
+                                <span class="tech-tag">QGIS</span>
+                                <span class="tech-tag">Télédétection</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card" data-category="teledetection ia" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="assets/images/projects/project1.png" alt="Projet de monitoring agricole" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="Voir le projet">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="Voir le code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Système de Monitoring Agricole Intelligent</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Terminé</span>
+                                </div>
+                            </div>
+                            <p>Plateforme utilisant l'IA et Google Earth Engine pour le suivi automatisé des cultures avec alertes prédictives.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">95%</span>
+                                    <span class="metric-label">Précision</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">500km²</span>
+                                    <span class="metric-label">Zone couverte</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">24/7</span>
+                                    <span class="metric-label">Monitoring</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Google Earth Engine</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card" data-category="webmapping" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="assets/images/projects/Plateforme.png" alt="Plateforme de Gestion Territoriale Interactive" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="Voir le projet">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="Voir le code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Plateforme de Gestion Territoriale Interactive</h3>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Terminé</span>
+                                </div>
+                            </div>
+                            <p>Application web pour la visualisation et l'analyse de données territoriales (parcelles, infrastructures) en temps réel.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">10K+</span>
+                                    <span class="metric-label">Utilisateurs</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">50M</span>
+                                    <span class="metric-label">Données</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">99.9%</span>
+                                    <span class="metric-label">Uptime</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Leaflet</span>
+                                <span class="tech-tag">PostGIS</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= Products Section ======================= -->
+        <section id="produits" class="products">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Formations</span>
+                    <h2 class="section-title">Mes Formations et Ressources</h2>
+                    <p class="section-subtitle">Montez en compétence avec des cours pratiques et des ressources éprouvées</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card featured glass-card" data-category="pack" data-aos="flip-left" data-aos-delay="100">
+                        <div class="product-badge popular">Le plus populaire</div>
+                        <div class="product-image">
+                            <img src="assets/images/products/pack-complet.png" alt="Pack Formation Complète" loading="lazy">
+                            <div class="product-overlay">
+                                <div class="product-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="product-details">
+                                    <span class="product-duration">40+ heures</span>
+                                    <span class="product-level">Tous niveaux</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Pack Complet - Géomaticien Expert</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">(127 avis)</span>
+                            </div>
+                            <p class="product-description">Toutes mes formations et e-books réunis dans un pack ultime avec bonus exclusifs et support prioritaire.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 8 formations complètes</li>
+                                    <li><i class="fas fa-check"></i> 15+ e-books et guides</li>
+                                    <li><i class="fas fa-check"></i> Support prioritaire 1 an</li>
+                                    <li><i class="fas fa-check"></i> Mises à jour gratuites</li>
+                                </ul>
+                            </div>
+                            <div class="product-pricing">
+                                <span class="old-price">200.00 €</span>
+                                <span class="new-price">149.99 €</span>
+                                <span class="discount">-25%</span>
+                            </div>
+                            <div class="product-actions">
+                                <a class="btn btn-primary btn-glow payment-button" href="https://mounkangsouloukna.gumroad.com/l/pack-expert" target="_blank" rel="noopener">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Acheter le Pack</span>
+                                </a>
+                                <button class="btn btn-outline btn-preview">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Aperçu</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card glass-card" data-category="ebook" data-aos="flip-left" data-aos-delay="200">
+                        <div class="product-badge bestseller">Best-seller</div>
+                        <div class="product-image">
+                            <img src="assets/images/products/ebook-qgis.png" alt="Guide Complet QGIS" loading="lazy">
+                            <div class="product-overlay">
+                                <div class="product-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="product-details">
+                                    <span class="product-pages">250+ pages</span>
+                                    <span class="product-format">PDF + Bonus</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Guide Complet QGIS 2024</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">(89 avis)</span>
+                            </div>
+                            <p class="product-description">E-book complet de 250+ pages pour maîtriser QGIS de A à Z avec des cas pratiques africains.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 15 chapitres détaillés</li>
+                                    <li><i class="fas fa-check"></i> 50+ exercices pratiques</li>
+                                    <li><i class="fas fa-check"></i> Données d'exemple incluses</li>
+                                    <li><i class="fas fa-check"></i> Bonus vidéos</li>
+                                </ul>
+                            </div>
+                            <div class="product-pricing">
+                                <span class="new-price">29.99 €</span>
+                            </div>
+                            <div class="product-actions">
+                                <a class="btn btn-primary payment-button" href="https://mounkangsouloukna.gumroad.com/l/guide-qgis" target="_blank" rel="noopener">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Obtenir le Guide</span>
+                                </a>
+                                <button class="btn btn-outline btn-preview">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Aperçu</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card glass-card" data-category="video" data-aos="flip-left" data-aos-delay="300">
+                        <div class="product-badge new">Nouveau</div>
+                        <div class="product-image">
+                            <img src="assets/images/products/formation-teledetection.png" alt="Formation Télédétection" loading="lazy">
+                            <div class="product-overlay">
+                                <div class="product-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="product-details">
+                                    <span class="product-duration">25 heures</span>
+                                    <span class="product-videos">45 vidéos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Maîtriser la Télédétection avec GEE</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">(45 avis)</span>
+                            </div>
+                            <p class="product-description">Formation vidéo complète sur Google Earth Engine et Python pour l'analyse environnementale.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 45 vidéos HD</li>
+                                    <li><i class="fas fa-check"></i> Scripts Python inclus</li>
+                                    <li><i class="fas fa-check"></i> Projets pratiques</li>
+                                    <li><i class="fas fa-check"></i> Certificat de fin</li>
+                                </ul>
+                            </div>
+                            <div class="product-pricing">
+                                <span class="new-price">49.99 €</span>
+                            </div>
+                            <div class="product-actions">
+                                <a class="btn btn-primary payment-button" href="https://mounkangsouloukna.gumroad.com/l/formation-gee" target="_blank" rel="noopener">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Suivre la Formation</span>
+                                </a>
+                                <button class="btn btn-outline btn-preview">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Aperçu</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= Contact Section ======================= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">Contactez-moi</h2>
+                    <p class="section-subtitle">Discutons de votre projet ou de vos besoins en formation</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="contact-intro glass-card">
+                            <h3>Prêt à collaborer ?</h3>
+                            <p>Que vous ayez besoin d'une expertise en géomatique, d'une formation sur mesure ou du développement d'une solution SIG, je suis à votre écoute pour vous accompagner.</p>
+                            <div class="contact-stats">
+                                <div class="contact-stat">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <strong>Réponse rapide</strong>
+                                        <span>< 24h en moyenne</span>
+                                    </div>
+                                </div>
+                                <div class="contact-stat">
+                                    <i class="fas fa-handshake"></i>
+                                    <div>
+                                        <strong>Collaboration</strong>
+                                        <span>Approche partenariale</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-methods glass-card">
+                            <h4>Méthodes de Contact</h4>
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <strong>Email</strong>
+                                    <a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <strong>Téléphone</strong>
+                                    <a href="tel:+23568275851">+235 68275851</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <strong>WhatsApp</strong>
+                                    <a href="https://wa.me/23568275851" target="_blank">Discuter maintenant</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-section glass-card">
+                            <h4>Suivez-moi</h4>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/mounkang-souloukna/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://www.youtube.com/@votre-chaine" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </a>
+                                <a href="https://www.facebook.com/votre-page" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://github.com/mounkangsouloukna" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container" data-aos="fade-left">
+                        <form class="contact-form glass-card" action="https://formspree.io/f/mgvylkvl" method="POST">
+                            <div class="form-header">
+                                <h3>Envoyez-moi un message</h3>
+                                <p>Décrivez votre projet et je vous recontacterai rapidement</p>
+                            </div>
+                            <div class="form-body">
+                                <div class="form-group">
+                                    <label for="name">Nom complet *</label>
+                                    <input type="text" id="name" name="Nom" required placeholder="Votre nom complet">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input type="email" id="email" name="Email" required placeholder="votre@email.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Téléphone</label>
+                                        <input type="tel" id="phone" name="Téléphone" placeholder="+235 XX XX XX XX">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Sujet *</label>
+                                    <select id="subject" name="Sujet" required>
+                                        <option value="" disabled selected>Sélectionnez un sujet...</option>
+                                        <option value="Consultation SIG">Consultation SIG/Géomatique</option>
+                                        <option value="Formation">Formation personnalisée</option>
+                                        <option value="Developpement">Développement de solution</option>
+                                        <option value="Collaboration">Collaboration/Partenariat</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="budget">Budget estimé</label>
+                                    <select id="budget" name="Budget">
+                                        <option value="">Sélectionnez une fourchette...</option>
+                                        <option value="< 1000€">Moins de 1000€</option>
+                                        <option value="1000€ - 5000€">1000€ - 5000€</option>
+                                        <option value="5000€ - 10000€">5000€ - 10000€</option>
+                                        <option value="> 10000€">Plus de 10000€</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="Message" rows="5" required placeholder="Décrivez votre projet, vos besoins ou posez vos questions ici..."></textarea>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="Newsletter" value="Oui">
+                                        <span class="checkmark"></span>
+                                        Je souhaite recevoir la newsletter avec des conseils géomatique
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-footer">
+                                <div class="form-status"></div>
+                                <button type="submit" class="btn btn-primary btn-glow submit-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Envoyer le message</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= Footer ======================= -->
+    <footer class="footer">
+        <div class="footer-background">
+            <div class="footer-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h3>Mounkang Souloukna</h3>
+                        <p>Géomaticien & Formateur Expert</p>
+                    </div>
+                    <p class="footer-description">Solutions géospatiales innovantes et formation professionnelle en SIG et télédétection pour l'Afrique francophone.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/mounkang-souloukna/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@votre-chaine" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/votre-page" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://github.com/mounkangsouloukna" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#competences">Compétences</a></li>
+                        <li><a href="#projets">Projets</a></li>
+                        <li><a href="#produits">Formations</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Direct</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>N'Djamena, Tchad</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+23568275851">+235 68275851</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Recevez les dernières actualités et conseils en géomatique</p>
+                    <form class="newsletter-form">
+                        <div class="newsletter-input">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit" aria-label="S'abonner">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>© 2024 Mounkang Souloukna. Tous droits réservés.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Politique de confidentialité</a>
+                        <a href="#">CGV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================= Back to Top ======================= -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut de la page">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ======================= Scripts ======================= -->
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Gumroad Script -->
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+    
+    <!-- Main Script -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

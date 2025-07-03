@@ -1,0 +1,47 @@
+{
+  "name": "portfolio-mounkang-souloukna",
+  "version": "1.0.0",
+  "description": "Portfolio moderne de Mounkang Souloukna - Géomaticien & Développeur SIG",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "cssnano assets/css/styles.css assets/css/styles.min.css",
+    "build:js": "terser assets/js/script.js -o assets/js/script.min.js",
+    "optimize": "imagemin assets/images/*.{jpg,png} --out-dir=assets/images/optimized",
+    "deploy": "gh-pages -d .",
+    "validate": "html-validate index.html",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html"
+  },
+  "keywords": [
+    "portfolio",
+    "géomatique",
+    "SIG",
+    "télédétection",
+    "QGIS",
+    "ArcGIS",
+    "formation",
+    "géospatial",
+    "cartographie",
+    "remote-sensing"
+  ],
+  "author": "Mounkang Souloukna <mounkangsouloukna@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano-cli": "^1.0.5",
+    "gh-pages": "^4.0.0",
+    "html-validate": "^7.13.0",
+    "imagemin-cli": "^7.0.0",
+    "lighthouse": "^10.4.0",
+    "live-server": "^1.2.2",
+    "terser": "^5.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mounkangsouloukna/portfolio.git"
+  },
+  "homepage": "https://mounkangsouloukna.github.io/portfolio",
+  "bugs": {
+    "url": "https://github.com/mounkangsouloukna/portfolio/issues"
+  }
+}
