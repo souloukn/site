@@ -304,9 +304,9 @@ class ModernPortfolio {
         const roles = [
             'Géomaticien',
             'Développeur SIG',
-            'Formateur Expert',
-            'Consultant Freelance',
-            'Spécialiste Télédétection'
+            'Enseignant universitaire',
+            'Formateur & créateur de contenus',
+            'Spécialiste en télédétection'
         ];
 
         let roleIndex = 0;
@@ -351,7 +351,7 @@ class ModernPortfolio {
         this.parallaxElements = document.querySelectorAll('.floating-shapes .shape');
         
         // Scroll-triggered animations
-        this.animatedElements = document.querySelectorAll('.timeline-item, .project-card, .product-card, .skill-category');
+        this.animatedElements = document.querySelectorAll('.timeline-item, .domain-card, .reference-card, .product-card, .skill-category');
         
         if (this.animatedElements.length > 0) {
             const observer = new IntersectionObserver((entries) => {
@@ -473,7 +473,6 @@ class ModernPortfolio {
     // ====================================================================
     initFilters() {
         const filterContainers = [
-            { container: '.projects-filter', items: '.project-card' },
             { container: '.products-filter', items: '.product-card' }
         ];
 
