@@ -3,378 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mounkang Souloukna - Géomaticien, développeur SIG &amp; enseignant</title>
+    <title>Mounkang Souloukna — Géomaticien, Cartographe & Enseignant universitaire</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Mounkang Souloukna - géomaticien, développeur SIG, enseignant à l'Université de Mongo (webmapping, entrepreneuriat), formateur et créateur de contenus éducatifs. N'Djamena, Tchad.">
-    <meta name="keywords" content="Mounkang Souloukna, géomaticien, SIG, télédétection, Université de Mongo, INSEED, RGPH, Google Earth Engine, Tchad, webmapping, QGIS, ArcGIS">
+    <meta name="description" content="Mounkang Souloukna — Géomaticien, cartographe et enseignant universitaire au Tchad. Cartographie de recensement (RGPH3), enquêtes de terrain dans la province du Lac, télédétection et webmapping pour partenaires institutionnels.">
+    <meta name="keywords" content="géomaticien, cartographie humanitaire, SIG, télédétection, RGPH3, INSEED, Lac Tchad, Mongo, ONU, ONG, Mounkang Souloukna">
     <meta name="author" content="Mounkang Souloukna">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Mounkang Souloukna - Géomaticien, développeur SIG &amp; enseignant">
-    <meta property="og:description" content="SIG, télédétection, webmapping et collecte de données. Enseignant à l'Université de Mongo. Expériences INSEED, CECISIG et missions de terrain au Tchad.">
+    <meta property="og:title" content="Mounkang Souloukna — Géomaticien & Cartographe">
+    <meta property="og:description" content="Cartographie, télédétection et enquêtes de terrain au service des institutions et ONG en Afrique centrale.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/images/profil.jpg"> 
-    <meta property="og:url" content="https://mounkangsouloukna.com/">
-    <link rel="canonical" href="https://mounkangsouloukna.com/">
+    <meta property="og:image" content="assets/images/profil.jpg">
     <meta property="og:locale" content="fr_FR">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <i class="fas fa-globe-africa"></i>
-            </div>
-            <div class="loading-text">Chargement...</div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
+
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="#accueil" class="brand">
+                <span class="brand-mark">MS</span>
+                <span class="brand-name">Mounkang&nbsp;Souloukna</span>
+            </a>
+            <nav class="primary-nav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="#apropos">Profil</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#projets">Missions</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="assets/documents/CV.pdf" class="btn btn-primary btn-sm header-cta" download>
+                <i class="fas fa-arrow-down"></i><span>CV (PDF)</span>
+            </a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </div>
-
-    <!-- Cursor Follow -->
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-outline" id="cursorOutline"></div>
-
-    <!-- ======================= Header & Navigation ======================= -->
-    <header role="banner" class="header">
-        <nav role="navigation" aria-label="Navigation principale" class="navbar">
-            <div class="nav-brand">
-                <a href="#accueil" aria-label="Retour à l'accueil" class="brand-link">
-                    <span class="brand-text">Mounkang</span>
-                    <span class="brand-accent">.</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#accueil" class="nav-link active">
-                        <span class="nav-text">Accueil</span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#apropos" class="nav-link">
-                        <span class="nav-text">À propos</span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#competences" class="nav-link">
-                        <span class="nav-text">Compétences</span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">
-                        <span class="nav-text">Parcours</span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#expertise-appliquee" class="nav-link">
-                        <span class="nav-text">Expertise</span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#produits" class="nav-link">
-                        <span class="nav-text">Formations</span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#references" class="nav-link">
-                        <span class="nav-text">Références</span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">
-                        <span class="nav-text">Contact</span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                </li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Changer le thème" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" id="navToggle">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-        </nav>
     </header>
 
     <main>
-        <!-- ======================= Hero Section ======================= -->
+
+        <!-- HERO -->
         <section id="accueil" class="hero">
-            <div class="hero-background">
-                <div class="bg-gradient"></div>
-                <div class="bg-pattern"></div>
-                <div class="floating-shapes">
-                    <div class="shape shape-1"></div>
-                    <div class="shape shape-2"></div>
-                    <div class="shape shape-3"></div>
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Géomaticien · Cartographe · N'Djamena, Tchad
+                    </p>
+                    <h1 class="hero-title">
+                        Cartographier le territoire,<br>
+                        <em>éclairer la décision.</em>
+                    </h1>
+                    <p class="hero-lead">
+                        Géomaticien et développeur SIG, j'accompagne les institutions publiques, les universités et les acteurs humanitaires en Afrique centrale sur la cartographie de recensement, les enquêtes de terrain, la télédétection et le webmapping.
+                    </p>
+                    <dl class="hero-meta">
+                        <div>
+                            <dt>Basé à</dt>
+                            <dd>N'Djamena, Tchad</dd>
+                        </div>
+                        <div>
+                            <dt>Langues de travail</dt>
+                            <dd>Français · Arabe local · Anglais (débutant)</dd>
+                        </div>
+                        <div>
+                            <dt>Disponibilité</dt>
+                            <dd><span class="dot dot-live"></span> Ouvert aux collaborations</dd>
+                        </div>
+                    </dl>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Me contacter</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="assets/documents/CV.pdf" class="btn btn-ghost" download>
+                            <i class="fas fa-download"></i>
+                            <span>Télécharger le CV</span>
+                        </a>
+                    </div>
                 </div>
+                <aside class="hero-portrait">
+                    <figure>
+                        <div class="portrait-frame">
+                            <img src="assets/images/profil.jpg" alt="Portrait de Mounkang Souloukna" loading="eager">
+                        </div>
+                        <figcaption>
+                            <span class="cap-line">Mounkang Souloukna</span>
+                            <span class="cap-sub">Faculté des Mines et de Géologie — Université de Mongo</span>
+                        </figcaption>
+                    </figure>
+                </aside>
             </div>
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-text" data-aos="fade-up">
-                        <div class="hero-greeting">
-                            Bonjour, je suis
-                        </div>
-                        <h1 class="hero-title">
-                            <span class="title-line">Mounkang</span>
-                            <span class="title-line title-accent">Souloukna</span>
-                        </h1>
-                        <div class="hero-roles">
-                            <span class="role-text">Je suis </span>
-                            <span class="typing-text" id="typingText"></span>
-                            <span class="cursor-blink">|</span>
-                        </div>
-                        <p class="hero-description">
-                            Géomaticien et développeur SIG. Enseignant missionnaire à l'Université de Mongo (webmapping et entrepreneuriat). J'accompagne la transformation des données en décisions par l'analyse spatiale, la modélisation et le développement géospatial - également formateur et créateur de contenus éducatifs.
+        </section>
+
+        <!-- PROFIL -->
+        <section id="apropos" class="section section-about">
+            <div class="container">
+                <header class="section-head">
+                    <span class="section-num">01</span>
+                    <h2 class="section-title">Profil</h2>
+                    <p class="section-kicker">Géomaticien, enseignant universitaire et créateur de contenus éducatifs.</p>
+                </header>
+
+                <div class="about-grid">
+                    <div class="about-prose">
+                        <p class="lede">
+                            Je transforme des données géographiques complexes en outils d'aide à la décision : cartes thématiques, analyses spatiales, plateformes webmapping et dispositifs de collecte de terrain.
                         </p>
-                        <ul class="hero-highlights" aria-label="Axes de travail">
-                            <li class="hero-highlight" data-aos="fade-up" data-aos-delay="100">
-                                <span class="hero-highlight-icon" aria-hidden="true"><i class="fas fa-university"></i></span>
-                                <span class="hero-highlight-text">Université de Mongo - responsabilité SIG &amp; télédétection, webmapping et formation (QGIS, ArcGIS, KoboToolbox, QField, Power BI)</span>
-                            </li>
-                            <li class="hero-highlight" data-aos="fade-up" data-aos-delay="200">
-                                <span class="hero-highlight-icon" aria-hidden="true"><i class="fas fa-map-marked-alt"></i></span>
-                                <span class="hero-highlight-text">Expérience INSEED (préparation des ZD, RGPH3) et coordination d'enquêtes de terrain au Tchad (province du Lac)</span>
-                            </li>
-                            <li class="hero-highlight" data-aos="fade-up" data-aos-delay="300">
-                                <span class="hero-highlight-icon" aria-hidden="true"><i class="fas fa-satellite"></i></span>
-                                <span class="hero-highlight-text">Télédétection avancée, Google Earth Engine, Geemap, cartographie thématique et applications géospatiales sur mesure</span>
-                            </li>
-                        </ul>
-                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-                            <a href="#contact" class="btn btn-primary btn-glow">
-                                <span class="btn-text">Me contacter</span>
-                                <i class="fas fa-arrow-right btn-icon"></i>
-                            </a>
-                            <a href="#produits" class="btn btn-secondary">
-                                <span class="btn-text">Mes formations</span>
-                            </a>
-                            <a href="assets/documents/cv.pdf" class="btn btn-outline" download>
-                                <i class="fas fa-download"></i>
-                                <span class="btn-text">Télécharger CV</span>
-                            </a>
-                        </div>
+                        <p>
+                            Enseignant missionnaire à l'<strong>Université Polytechnique de Mongo</strong> (Faculté des Mines et de Géologie, Département de Géomatique), j'y assure les cours de Systèmes d'Information Géographique, télédétection, webmapping et entrepreneuriat en géomatique. En parallèle, je conduis des missions cartographiques et des enquêtes de terrain au Tchad, notamment dans la <strong>province du Lac</strong> et pour l'<strong>INSEED</strong> dans le cadre du 3ᵉ Recensement Général de la Population et de l'Habitat (RGPH3).
+                        </p>
+                        <p>
+                            Mon parcours académique : Licence en Géographie à l'Université de Douala (2019–2021), Master 1 et Master 2 en <em>Cartographie, Télédétection et SIG appliquée à la Gestion Durable des Territoires</em> à l'Université de Yaoundé 1 (2021–2023, finalisation académique en cours).
+                        </p>
                     </div>
-                    <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="profile-container">
-                            <div class="profile-image">
-                                <img src="assets/images/profil.jpg" alt="Photo de profil de Mounkang Souloukna" loading="eager">
-                                <div class="profile-ring"></div>
-                                <div class="profile-glow"></div>
+
+                    <aside class="about-facts">
+                        <h3>En bref</h3>
+                        <dl>
+                            <div>
+                                <dt>Fonction principale</dt>
+                                <dd>Enseignant missionnaire — Université de Mongo</dd>
                             </div>
-                            <div class="tech-icons">
-                                <div class="tech-icon tech-icon-1" data-tooltip="QGIS">
-                                    <i class="fas fa-map-marked-alt"></i>
-                                </div>
-                                <div class="tech-icon tech-icon-2" data-tooltip="Google Earth Engine">
-                                    <i class="fas fa-satellite"></i>
-                                </div>
-                                <div class="tech-icon tech-icon-3" data-tooltip="Python">
-                                    <i class="fab fa-python"></i>
-                                </div>
-                                <div class="tech-icon tech-icon-4" data-tooltip="JavaScript">
-                                    <i class="fab fa-js-square"></i>
-                                </div>
+                            <div>
+                                <dt>Mission en cours</dt>
+                                <dd>Cartographe RGPH3 — INSEED</dd>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="600">
-                    <a href="#apropos" aria-label="Défiler vers la section À propos" class="scroll-link">
-                        <span class="scroll-text">Découvrir</span>
-                        <div class="scroll-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </a>
+                            <div>
+                                <dt>Spécialités</dt>
+                                <dd>Cartographie de recensement · Télédétection · Webmapping · Enquêtes de terrain</dd>
+                            </div>
+                            <div>
+                                <dt>Zones d'intervention</dt>
+                                <dd>Tchad — N'Djamena, Mongo, Province du Lac (Mamdi, Fouli, Kaya)</dd>
+                            </div>
+                            <div>
+                                <dt>Contact</dt>
+                                <dd>
+                                    <a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a><br>
+                                    <a href="tel:+23568275851">+235 68 27 58 51</a>
+                                </dd>
+                            </div>
+                        </dl>
+                    </aside>
                 </div>
             </div>
         </section>
 
-        <!-- ======================= About Section ======================= -->
-        <section id="apropos" class="about">
+        <!-- EXPERTISE -->
+        <section id="expertise" class="section section-expertise">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Découvrez</span>
-                    <h2 class="section-title">À propos de moi</h2>
-                    <p class="section-subtitle">Profil professionnel (aligné sur le CV)</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text" data-aos="fade-right">
-                        <div class="text-block">
-                            <p class="highlight-text">
-                                Géomaticien et développeur SIG. Enseignant missionnaire à l'Université de Mongo en webmapping et entrepreneuriat. J'aide à transformer les données en décisions grâce à l'analyse spatiale, la modélisation d'infrastructures et le développement géospatial. Créateur de contenu éducatif.
-                            </p>
-                            <p>
-                                Parcours universitaire en géographie et en cartographie / télédétection / SIG appliqués à la gestion durable des territoires (Université de Douala, puis Université de Yaoundé I). Le CV indique une finalisation académique en cours pour le master en géomatique appliquée-les précisions administratives figurent sur le document PDF.
-                            </p>
-                            <p>
-                                <strong>Langues :</strong> français (courant), anglais (débutant), arabe local (courant).
-                            </p>
-                        </div>
-                        <div class="expertise-grid">
-                            <div class="expertise-item">
-                                <div class="expertise-icon">
-                                    <i class="fas fa-university"></i>
-                                </div>
-                                <div class="expertise-content">
-                                    <h4>Enseignement</h4>
-                                    <p>Webmapping et entrepreneuriat en géomatique à l'Université de Mongo</p>
-                                </div>
-                            </div>
-                            <div class="expertise-item">
-                                <div class="expertise-icon">
-                                    <i class="fas fa-map"></i>
-                                </div>
-                                <div class="expertise-content">
-                                    <h4>SIG &amp; cartographie</h4>
-                                    <p>Cartes thématiques et interactives, délimitation et analyse spatiale</p>
-                                </div>
-                            </div>
-                            <div class="expertise-item">
-                                <div class="expertise-icon">
-                                    <i class="fas fa-chalkboard-teacher"></i>
-                                </div>
-                                <div class="expertise-content">
-                                    <h4>Formation &amp; contenus</h4>
-                                    <p>Formateur SIG, télédétection et cartographie ; création de ressources pédagogiques</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-info" data-aos="fade-left">
-                        <div class="info-card glass-card">
-                            <div class="card-header">
-                                <i class="fas fa-user"></i>
-                                <h3>Informations Personnelles</h3>
-                            </div>
-                            <div class="info-list">
-                                <div class="info-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <div class="info-content">
-                                        <strong>Localisation</strong>
-                                        <span>N'Djamena, Tchad</span>
-                                    </div>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-phone"></i>
-                                    <div class="info-content">
-                                        <strong>Téléphone</strong>
-                                        <a href="tel:+23568275851">+235 68275851</a>
-                                    </div>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <div class="info-content">
-                                        <strong>Email</strong>
-                                        <a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="availability-card glass-card">
-                            <div class="card-header">
-                                <i class="fas fa-certificate"></i>
-                                <h3>Certificats (extraits du CV)</h3>
-                            </div>
-                            <ul class="certificates-list">
-                                <li><strong>Microsoft</strong> — « Obtenir des données dans Power BI » (parcours de la collecte à l'utilisation des données)</li>
-                                <li><strong>Philanthropy University</strong> — formation suivie (dates : 10–11 mai 2023 ; 28 août 2023, selon CV)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <header class="section-head">
+                    <span class="section-num">02</span>
+                    <h2 class="section-title">Domaines d'intervention</h2>
+                    <p class="section-kicker">Six thématiques où je conjugue données géographiques et enjeux de terrain.</p>
+                </header>
 
-        <!-- ======================= Skills Section ======================= -->
-        <section id="competences" class="skills">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Expertise</span>
+                <div class="domains-grid">
+                    <article class="domain-card">
+                        <span class="domain-num">01</span>
+                        <h3>Cartographie de recensement &amp; démographie</h3>
+                        <p>Préparation et mise à jour des Zones de Dénombrement (ZD), délimitation administrative, appui aux opérations statistiques nationales (RGPH3).</p>
+                    </article>
+                    <article class="domain-card">
+                        <span class="domain-num">02</span>
+                        <h3>Mouvements de population &amp; déplacement forcé</h3>
+                        <p>Analyse des dynamiques migratoires et de la recomposition socio-spatiale, production de cartes analytiques pour la recherche et l'action humanitaire.</p>
+                    </article>
+                    <article class="domain-card">
+                        <span class="domain-num">03</span>
+                        <h3>Foncier rural &amp; sécurité alimentaire</h3>
+                        <p>Enquêtes sur l'accès à la terre, suivi de la production agricole, conception de questionnaires numériques et analyse géospatiale des données collectées.</p>
+                    </article>
+                    <article class="domain-card">
+                        <span class="domain-num">04</span>
+                        <h3>Télédétection &amp; analyse environnementale</h3>
+                        <p>Traitement d'images satellites et aériennes, analyses multi-temporelles, automatisation via Google Earth Engine pour le suivi des écosystèmes sahéliens.</p>
+                    </article>
+                    <article class="domain-card">
+                        <span class="domain-num">05</span>
+                        <h3>Webmapping &amp; solutions géospatiales</h3>
+                        <p>Conception de cartes web interactives, développement d'applications géospatiales sur mesure et intégration de bases de données spatiales.</p>
+                    </article>
+                    <article class="domain-card">
+                        <span class="domain-num">06</span>
+                        <h3>Renforcement de capacités</h3>
+                        <p>Formations universitaires et professionnelles aux outils SIG, télédétection, cartographie numérique et collecte de données mobiles.</p>
+                    </article>
+                </div>
+
+                <header class="section-head section-head-secondary">
                     <h2 class="section-title">Compétences techniques</h2>
-                    <p class="section-subtitle">Synthèse alignée sur le CV (outil par outil)</p>
-                </div>
+                    <p class="section-kicker">Outils maîtrisés et utilisés en mission ou en enseignement.</p>
+                </header>
+
                 <div class="skills-grid">
-                    <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="skill-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-map"></i>
-                            </div>
-                            <h3>SIG &amp; télédétection</h3>
-                        </div>
-                        <p class="skill-intro">Maîtrise des logiciels SIG ; expertise en télédétection avancée (images satellites et aériennes, analyse multi-temporelle).</p>
-                        <ul class="competency-tags" aria-label="SIG et télédétection">
-                            <li>ArcGIS / ArcMap</li>
+                    <div class="skill-cluster">
+                        <h4><i class="fas fa-map"></i> SIG &amp; Cartographie</h4>
+                        <ul class="chip-list">
+                            <li>ArcGIS</li>
                             <li>ArcGIS Pro</li>
                             <li>QGIS</li>
                             <li>ENVI</li>
                             <li>ERDAS</li>
+                        </ul>
+                    </div>
+                    <div class="skill-cluster">
+                        <h4><i class="fas fa-satellite"></i> Télédétection</h4>
+                        <ul class="chip-list">
                             <li>Google Earth Engine</li>
                             <li>Geemap</li>
-                            <li>Cartographie thématique</li>
-                            <li>Cartes interactives</li>
+                            <li>Analyse multi-temporelle</li>
+                            <li>Indices spectraux</li>
+                            <li>Landsat / Sentinel</li>
                         </ul>
                     </div>
-
-                    <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="skill-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h3>Programmation &amp; développement</h3>
-                        </div>
-                        <p class="skill-intro">Backend, frontend et applications géospatiales et cartographiques web sur mesure.</p>
-                        <ul class="competency-tags" aria-label="Développement">
+                    <div class="skill-cluster">
+                        <h4><i class="fas fa-code"></i> Développement &amp; bases de données</h4>
+                        <ul class="chip-list">
                             <li>Python</li>
+                            <li>R</li>
                             <li>Node.js</li>
-                            <li>PostgreSQL / PostGIS</li>
                             <li>JavaScript</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Cartes web interactives</li>
-                            <li>Applications géospatiales</li>
+                            <li>HTML / CSS</li>
+                            <li>PostgreSQL / PostGIS</li>
                         </ul>
                     </div>
-
-                    <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="skill-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <h3>Collecte de données</h3>
-                        </div>
-                        <p class="skill-intro">Expérience des chaînes mobiles ; capacité à concevoir des dispositifs de collecte adaptés au projet.</p>
-                        <ul class="competency-tags" aria-label="Collecte de données">
+                    <div class="skill-cluster">
+                        <h4><i class="fas fa-mobile-screen-button"></i> Collecte de données mobile</h4>
+                        <ul class="chip-list">
                             <li>KoboToolbox</li>
                             <li>KoboCollect</li>
-                            <li>ODK Build</li>
-                            <li>ODK Collect</li>
+                            <li>ODK Build / Collect</li>
                             <li>Survey123</li>
                             <li>QField</li>
                             <li>Mergin Maps</li>
@@ -382,601 +252,357 @@
                             <li>GPS Garmin</li>
                         </ul>
                     </div>
-
-                    <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="skill-header">
-                            <div class="skill-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h3>Analyse de données &amp; IA</h3>
-                        </div>
-                        <p class="skill-intro">Analyse spatiale avancée ; intégration de l'IA dans les processus géospatiaux pour l'automatisation et l'appui à la décision.</p>
-                        <ul class="competency-tags" aria-label="Analyse et IA">
-                            <li>Python</li>
-                            <li>R</li>
-                            <li>Analyse spatiale avancée</li>
-                            <li>IA appliquée aux flux géospatiaux</li>
+                    <div class="skill-cluster">
+                        <h4><i class="fas fa-chart-column"></i> Analyse de données &amp; IA</h4>
+                        <ul class="chip-list">
+                            <li>Pandas / GeoPandas</li>
                             <li>Power BI</li>
+                            <li>Analyse spatiale (Python/R)</li>
+                            <li>IA appliquée au géospatial</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ======================= Experience Section ======================= -->
-        <section id="experience" class="experience">
+        <!-- PARCOURS -->
+        <section id="parcours" class="section section-parcours">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Parcours</span>
-                    <h2 class="section-title">Mon Parcours</h2>
-                    <p class="section-subtitle">Expériences et diplômes tels que portés sur le CV</p>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                        <div class="timeline-marker">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <span class="timeline-date">Octobre 2025 - présent</span>
-                                <div class="timeline-badge current">Actuel</div>
-                            </div>
-                            <h3>Responsable SIG &amp; télédétection</h3>
-                            <h4>Université de Mongo (Tchad)</h4>
-                            <p>Enseignant missionnaire - enseignement en webmapping et entrepreneuriat en géomatique.</p>
-                            <div class="timeline-achievements">
-                                <ul>
-                                    <li>Traitement d'images satellitaires et aériennes</li>
-                                    <li>Analyse statistique et modélisation SIG</li>
-                                    <li>Développement de solutions webmapping</li>
-                                    <li>Utilisation avancée de Google Earth Engine</li>
-                                    <li>Collaboration multidisciplinaire pour des solutions géospatiales</li>
-                                    <li>Formateur en SIG, télédétection et cartographie (QGIS, ArcGIS Desktop, ArcGIS Pro, KoboToolbox, QField, Power BI)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <header class="section-head">
+                    <span class="section-num">03</span>
+                    <h2 class="section-title">Parcours</h2>
+                    <p class="section-kicker">Expériences professionnelles, missions et formation académique.</p>
+                </header>
 
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
-                        <div class="timeline-marker">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <span class="timeline-date">Septembre 2025 - janvier 2026</span>
-                                <div class="timeline-badge freelance">Mission</div>
-                            </div>
-                            <h3>Chef de projet - enquête sur l'accès à la terre et la production agricole</h3>
-                            <h4>Départements de Mamdi, Fouli et Kaya -province du Lac (Tchad)</h4>
-                            <div class="timeline-achievements">
-                                <ul>
-                                    <li>Coordination de l'enquête de terrain et supervision des enquêteurs</li>
-                                    <li>Mise en place de la collecte numérique et analyse des données</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <ol class="timeline" aria-label="Parcours professionnel et académique">
 
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="175">
-                        <div class="timeline-marker">
-                            <i class="fas fa-book"></i>
+                    <li class="t-item t-pro">
+                        <span class="t-date">Janv. 2026</span>
+                        <div class="t-body">
+                            <p class="t-org">INSEED — Institut National de la Statistique, des Études Économiques et Démographiques</p>
+                            <h3 class="t-role">Cartographe, préparation des Zones de Dénombrement (ZD)</h3>
+                            <p class="t-desc">Préparation et mise à jour des Zones de Dénombrement pour le 3ᵉ Recensement Général de la Population et de l'Habitat du Tchad. Analyse spatiale et délimitation à partir des données géographiques et administratives existantes.</p>
                         </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <span class="timeline-date">Depuis octobre 2025</span>
-                                <div class="timeline-badge research">Recherche</div>
-                            </div>
-                            <h3>Chef de projet de recherche - migration forcée et recomposition socio-spatiale</h3>
-                            <h4>Province du Lac (Tchad)</h4>
-                            <div class="timeline-achievements">
-                                <ul>
-                                    <li>Coordination du projet de recherche et des enquêtes de terrain</li>
-                                    <li>Analyse des dynamiques migratoires et production de cartes analytiques</li>
-                                    <li>Appui à la collecte numérique et à l'analyse des données</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </li>
 
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="timeline-marker">
-                            <i class="fas fa-briefcase"></i>
+                    <li class="t-item t-pro current">
+                        <span class="t-date">Oct. 2025 — présent</span>
+                        <div class="t-body">
+                            <p class="t-org">Université Polytechnique de Mongo — Faculté des Mines et de Géologie</p>
+                            <h3 class="t-role">Enseignant missionnaire, Département de Géomatique</h3>
+                            <p class="t-desc">Cours universitaires en webmapping, entrepreneuriat en géomatique, Systèmes d'Information Géographique (SIG3) et télédétection (L2). Conception et administration des évaluations.</p>
                         </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <span class="timeline-date">Janvier 2024 - novembre 2025</span>
-                                <div class="timeline-badge freelance">Mission</div>
-                            </div>
-                            <h3>Cartographe chargé de la préparation des zones de dénombrement (ZD)</h3>
-                            <h4>INSEED - préparation du RGPH3 (Tchad)</h4>
-                            <div class="timeline-achievements">
-                                <ul>
-                                    <li>Participation à la préparation et à la mise à jour des ZD</li>
-                                    <li>Analyse spatiale et délimitation des ZD à partir des données géographiques et administratives existantes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </li>
 
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
-                        <div class="timeline-marker">
-                            <i class="fas fa-chalkboard-teacher"></i>
+                    <li class="t-item t-pro">
+                        <span class="t-date">Oct. 2025</span>
+                        <div class="t-body">
+                            <p class="t-org">Province du Lac, Tchad — Départements de Mamdi, Fouli et Kaya</p>
+                            <h3 class="t-role">Chef de projet de recherche — Migration forcée et recomposition socio-spatiale</h3>
+                            <p class="t-desc">Coordination du projet de recherche et des enquêtes de terrain. Analyse des dynamiques migratoires et production de cartes analytiques.</p>
                         </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <span class="timeline-date">Missions d'enseignement</span>
-                                <div class="timeline-badge freelance">Enseignement</div>
-                            </div>
-                            <h3>Enseignant missionnaire</h3>
-                            <h4>CECISIG - Cabinet d'expertise et de consultance en informatique et SIG</h4>
-                            <div class="timeline-achievements">
-                                <ul>
-                                    <li>Webmapping</li>
-                                    <li>Entrepreneuriat en géomatique</li>
-                                    <li>Systèmes d'information géographique</li>
-                                    <li>Télédétection</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </li>
 
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                        <div class="timeline-marker">
-                            <i class="fas fa-graduation-cap"></i>
+                    <li class="t-item t-pro">
+                        <span class="t-date">Sept. 2025</span>
+                        <div class="t-body">
+                            <p class="t-org">Province du Lac, Tchad — Département de Mamdi</p>
+                            <h3 class="t-role">Chef de projet — Enquête sur l'accès à la terre et la production agricole</h3>
+                            <p class="t-desc">Coordination de l'enquête de terrain, supervision des enquêteurs, mise en place de la collecte numérique et analyse des données.</p>
                         </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <span class="timeline-date">2019 - 2023</span>
-                                <div class="timeline-badge education">Formation</div>
-                            </div>
-                            <h3>Diplômes universitaires</h3>
-                            <h4>Universités de Douala et Yaoundé I</h4>
-                            <div class="timeline-achievements">
-                                <ul>
-                                    <li><strong>2022 - 2023</strong> - Master 2 en cartographie, télédétection et SIG appliqués à la gestion durable des territoires — Université de Yaoundé I</li>
-                                    <li><strong>Master 1</strong> - Cartographie, télédétection et SIG appliqués à la gestion durable des territoires - Université de Yaoundé I</li>
-                                    <li><strong>2019 - 2021</strong> - Licence en géographie - Université de Douala</li>
-                                </ul>
-                            </div>
-                            <p class="timeline-footnote">Le CV mentionne une finalisation académique en cours pour le master en géomatique appliquée ; statut exact selon attestation universitaire.</p>
+                    </li>
+
+                    <li class="t-item t-pro">
+                        <span class="t-date">Janv. 2024 — Nov. 2025</span>
+                        <div class="t-body">
+                            <p class="t-org">CECISIG</p>
+                            <h3 class="t-role">Responsable SIG &amp; Télédétection</h3>
+                            <p class="t-desc">Traitement d'images satellitaires et aériennes, analyse statistique et modélisation SIG, développement de solutions webmapping, usage avancé de Google Earth Engine, formation aux outils QGIS, ArcGIS Desktop, ArcGIS Pro, KoboToolbox, QField et Power BI.</p>
                         </div>
-                    </div>
+                    </li>
+
+                    <li class="t-item t-edu">
+                        <span class="t-date">2022 — 2023</span>
+                        <div class="t-body">
+                            <p class="t-org">Université de Yaoundé 1, Cameroun</p>
+                            <h3 class="t-role">Master 2 — Cartographie, Télédétection et SIG appliquée à la Gestion Durable des Territoires</h3>
+                            <p class="t-desc">Finalisation académique en cours.</p>
+                        </div>
+                    </li>
+
+                    <li class="t-item t-edu">
+                        <span class="t-date">2021 — 2022</span>
+                        <div class="t-body">
+                            <p class="t-org">Université de Yaoundé 1, Cameroun</p>
+                            <h3 class="t-role">Master 1 — Cartographie, Télédétection et SIG appliquée à la Gestion Durable des Territoires</h3>
+                        </div>
+                    </li>
+
+                    <li class="t-item t-edu">
+                        <span class="t-date">2019 — 2021</span>
+                        <div class="t-body">
+                            <p class="t-org">Université de Douala, Cameroun</p>
+                            <h3 class="t-role">Licence en Géographie</h3>
+                        </div>
+                    </li>
+
+                </ol>
+
+                <div class="certifs">
+                    <h3 class="block-title"><span class="block-rule"></span> Certifications</h3>
+                    <ul class="certif-list">
+                        <li>
+                            <span class="certif-date">28 août 2023</span>
+                            <span class="certif-name">Obtenir des données dans Power BI</span>
+                            <span class="certif-issuer">Microsoft</span>
+                        </li>
+                        <li>
+                            <span class="certif-date">10–11 mai 2023</span>
+                            <span class="certif-name">De la collecte des données à l'utilisation des données</span>
+                            <span class="certif-issuer">Philanthropy University</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- ======================= Expertise appliquée (aucune référence projet inventée) ======================= -->
-        <section id="expertise-appliquee" class="projects">
+        <!-- MISSIONS -->
+        <section id="projets" class="section section-projects">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Expertise</span>
-                    <h2 class="section-title">Domaines d'intervention</h2>
-                    <p class="section-subtitle">Missions et thématiques décrites sur le CV (institutions, recensement, recherche)</p>
-                </div>
-                <p class="integrity-note" data-aos="fade-up" data-aos-delay="80">
-                    Les références professionnelles et le CV détaillé sont disponibles sur demande ; les contacts des référents figurent dans la section « Références » ci-dessous.
-                </p>
+                <header class="section-head">
+                    <span class="section-num">04</span>
+                    <h2 class="section-title">Missions sélectionnées</h2>
+                    <p class="section-kicker">Études de cas illustrant la méthodologie et les livrables.</p>
+                </header>
 
-                <div class="domains-grid">
-                    <article class="domain-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="domain-icon" aria-hidden="true"><i class="fas fa-draw-polygon"></i></div>
-                        <h3>Recensement &amp; délimitation</h3>
-                        <p>Préparation et mise à jour de zones de dénombrement (ZD) pour le RGPH3, à partir de données géographiques et administratives - expérience INSEED.</p>
-                        <p class="domain-tools"><strong>Thématiques :</strong> analyse spatiale, délimitation, cartographie de support</p>
+                <div class="projects">
+
+                    <article class="project">
+                        <div class="project-head">
+                            <span class="project-tag">Cartographie de recensement</span>
+                            <h3>Préparation des Zones de Dénombrement — RGPH3</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Mission INSEED de préparation et de mise à jour des Zones de Dénombrement (ZD) pour le 3ᵉ Recensement Général de la Population et de l'Habitat du Tchad. L'enjeu : disposer d'un découpage spatial cohérent et exhaustif pour les opérations de terrain du recensement national.</p>
+                            <dl class="project-meta">
+                                <div><dt>Année</dt><dd>2026</dd></div>
+                                <div><dt>Commanditaire</dt><dd>INSEED — Tchad</dd></div>
+                                <div><dt>Rôle</dt><dd>Cartographe</dd></div>
+                                <div><dt>Outils</dt><dd>QGIS · ArcGIS · données administratives</dd></div>
+                            </dl>
+                        </div>
                     </article>
-                    <article class="domain-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="domain-icon" aria-hidden="true"><i class="fas fa-users"></i></div>
-                        <h3>Enquêtes de terrain &amp; coordination</h3>
-                        <p>Coordination d'enquêtes (accès à la terre, production agricole ; migration et recomposition socio-spatiale), supervision d'enquêteurs, collecte numérique et analyse.</p>
-                        <p class="domain-tools"><strong>Zones :</strong> province du Lac (Mamdi, Fouli, Kaya), Tchad</p>
+
+                    <article class="project">
+                        <div class="project-head">
+                            <span class="project-tag">Recherche &amp; déplacement</span>
+                            <h3>Migration forcée et recomposition socio-spatiale — Province du Lac</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Projet de recherche conduit dans les départements de Mamdi, Fouli et Kaya, zone marquée par les dynamiques de déplacement liées à la crise sécuritaire du bassin du lac Tchad. Coordination des enquêtes de terrain, analyse des dynamiques migratoires et production de cartes analytiques.</p>
+                            <dl class="project-meta">
+                                <div><dt>Année</dt><dd>2025</dd></div>
+                                <div><dt>Territoire</dt><dd>Mamdi · Fouli · Kaya — Province du Lac</dd></div>
+                                <div><dt>Rôle</dt><dd>Chef de projet</dd></div>
+                                <div><dt>Outils</dt><dd>KoboCollect · QGIS · cartographie thématique</dd></div>
+                            </dl>
+                        </div>
                     </article>
-                    <article class="domain-card glass-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="domain-icon" aria-hidden="true"><i class="fas fa-satellite"></i></div>
-                        <h3>Télédétection, enseignement &amp; webmapping</h3>
-                        <p>Traitement d'images satellitaires et aériennes, Google Earth Engine, solutions webmapping ; enseignement à l'Université de Mongo et missions pédagogiques (CECISIG).</p>
-                        <p class="domain-tools"><strong>Outils :</strong> GEE, Geemap, stack SIG et développement web</p>
+
+                    <article class="project">
+                        <div class="project-head">
+                            <span class="project-tag">Foncier &amp; agriculture</span>
+                            <h3>Accès à la terre et production agricole — Mamdi</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Enquête de terrain sur l'accès au foncier et la production agricole dans le département de Mamdi (Province du Lac). Conception du protocole de collecte numérique, supervision des enquêteurs et analyse des données pour éclairer les politiques foncières locales.</p>
+                            <dl class="project-meta">
+                                <div><dt>Année</dt><dd>2025</dd></div>
+                                <div><dt>Territoire</dt><dd>Département de Mamdi — Province du Lac</dd></div>
+                                <div><dt>Rôle</dt><dd>Chef de projet</dd></div>
+                                <div><dt>Outils</dt><dd>ODK Build · KoboToolbox · QField</dd></div>
+                            </dl>
+                        </div>
                     </article>
+
+                    <article class="project">
+                        <div class="project-head">
+                            <span class="project-tag">Télédétection &amp; webmapping</span>
+                            <h3>Solutions géospatiales — CECISIG (2024–2025)</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>En tant que responsable SIG &amp; Télédétection au CECISIG : traitement d'images satellitaires et aériennes, modélisation SIG, développement de solutions webmapping et automatisation via Google Earth Engine. Conduite parallèle de programmes de formation aux outils SIG et cartographiques.</p>
+                            <dl class="project-meta">
+                                <div><dt>Période</dt><dd>Janv. 2024 — Nov. 2025</dd></div>
+                                <div><dt>Structure</dt><dd>CECISIG</dd></div>
+                                <div><dt>Rôle</dt><dd>Responsable SIG &amp; Télédétection</dd></div>
+                                <div><dt>Outils</dt><dd>Google Earth Engine · Python · ENVI · ERDAS</dd></div>
+                            </dl>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <!-- ======================= Products Section ======================= -->
-        <section id="produits" class="products">
+        <!-- RÉFÉRENCES -->
+        <section id="references" class="section section-refs">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Formations</span>
-                    <h2 class="section-title">Formations et ressources</h2>
-                    <p class="section-subtitle">Parcours d'apprentissage proposés en ligne ; le détail des contenus figure sur les pages de vente.</p>
-                </div>
-                <div class="products-grid">
-                    <div class="product-card featured glass-card" data-category="pack" data-aos="flip-left" data-aos-delay="100">
-                        <div class="product-badge popular">Pack groupé</div>
-                        <div class="product-image">
-                            <img src="assets/images/products/pack-complet.png" alt="Pack Formation Complète" loading="lazy">
-                            <div class="product-overlay">
-                                <div class="product-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div class="product-details">
-                                    <span class="product-level">Tous niveaux</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3>Pack Complet - Parcours géomaticien</h3>
-                            <p class="product-description">Ensemble de formations et de ressources regroupés ; modalités et contenus détaillés sur la page Gumroad.</p>
-                            <div class="product-features">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Plusieurs modules de formation</li>
-                                    <li><i class="fas fa-check"></i> Ressources PDF et guides</li>
-                                    <li><i class="fas fa-check"></i> Support selon offre Gumroad</li>
-                                    <li><i class="fas fa-check"></i> Mises à jour selon conditions de l'offre</li>
-                                </ul>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="old-price">200.00 €</span>
-                                <span class="new-price">149.99 €</span>
-                                <span class="discount">-25%</span>
-                            </div>
-                            <div class="product-actions">
-                                <a class="btn btn-primary btn-glow payment-button" href="https://mounkangsouloukna.gumroad.com/l/pack-expert" target="_blank" rel="noopener">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span>Acheter le Pack</span>
-                                </a>
-                                <button class="btn btn-outline btn-preview">
-                                    <i class="fas fa-eye"></i>
-                                    <span>Aperçu</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <header class="section-head">
+                    <span class="section-num">05</span>
+                    <h2 class="section-title">Références</h2>
+                    <p class="section-kicker">Personnes pouvant attester de mon parcours et de mes compétences.</p>
+                </header>
 
-                    <div class="product-card glass-card" data-category="ebook" data-aos="flip-left" data-aos-delay="200">
-                        <div class="product-badge bestseller">Ressource PDF</div>
-                        <div class="product-image">
-                            <img src="assets/images/products/ebook-qgis.png" alt="Guide Complet QGIS" loading="lazy">
-                            <div class="product-overlay">
-                                <div class="product-icon">
-                                    <i class="fas fa-book"></i>
-                                </div>
-                                <div class="product-details">
-                                    <span class="product-pages">Format PDF</span>
-                                    <span class="product-format">Détail sur Gumroad</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3>Guide QGIS</h3>
-                            <p class="product-description">Document PDF pour progresser sur QGIS avec des exercices pratiques ; précisions sur la page Gumroad.</p>
-                            <div class="product-features">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Chapitres structurés</li>
-                                    <li><i class="fas fa-check"></i> Exercices pratiques</li>
-                                    <li><i class="fas fa-check"></i> Jeux de données d'exemple lorsque fournis</li>
-                                    <li><i class="fas fa-check"></i> Modalités d'accompagnement selon offre</li>
-                                </ul>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="new-price">24.99 €</span>
-                            </div>
-                            <div class="product-actions">
-                                <a class="btn btn-primary payment-button" href="https://mounkangsouloukna.gumroad.com/l/guide-qgis" target="_blank" rel="noopener">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span>Obtenir le Guide</span>
-                                </a>
-                                <button class="btn btn-outline btn-preview">
-                                    <i class="fas fa-eye"></i>
-                                    <span>Aperçu</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card glass-card" data-category="video" data-aos="flip-left" data-aos-delay="300">
-                        <div class="product-badge new">Vidéo</div>
-                        <div class="product-image">
-                            <img src="assets/images/products/formation-teledetection.png" alt="Formation Télédétection" loading="lazy">
-                            <div class="product-overlay">
-                                <div class="product-icon">
-                                    <i class="fas fa-play"></i>
-                                </div>
-                                <div class="product-details">
-                                    <span class="product-duration">Formation vidéo</span>
-                                    <span class="product-videos">Contenu sur Gumroad</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3>Télédétection avec Google Earth Engine</h3>
-                            <p class="product-description">Parcours sur Google Earth Engine et Python pour l'analyse environnementale ; durée et modules précisés sur Gumroad.</p>
-                            <div class="product-features">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Supports et scripts selon offre</li>
-                                    <li><i class="fas fa-check"></i> Travaux dirigés / cas d'usage</li>
-                                    <li><i class="fas fa-check"></i> Attestation si prévue par l'offre</li>
-                                </ul>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="new-price">49.99 €</span>
-                            </div>
-                            <div class="product-actions">
-                                <a class="btn btn-primary payment-button" href="https://mounkangsouloukna.gumroad.com/l/formation-gee" target="_blank" rel="noopener">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span>Suivre la Formation</span>
-                                </a>
-                                <button class="btn btn-outline btn-preview">
-                                    <i class="fas fa-eye"></i>
-                                    <span>Aperçu</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======================= Références (CV) ======================= -->
-        <section id="references" class="references-section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">CV</span>
-                    <h2 class="section-title">Références professionnelles</h2>
-                    <p class="section-subtitle">Personnes désignées comme référentes sur le curriculum vitæ</p>
-                </div>
-                <div class="references-grid">
-                    <article class="reference-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Teumobe Pabong</h3>
-                        <p class="reference-role">Géographe, expert associé à la CBLT - spécialiste du foncier agricole.</p>
-                        <dl class="reference-contact">
-                            <div><dt>Téléphone</dt><dd><a href="tel:+23566336766">+235 66 33 67 66</a> / <a href="tel:+23590929780">+235 90 92 97 80</a></dd></div>
+                <div class="refs-grid">
+                    <article class="ref-card">
+                        <h3>Teumobé Pabong</h3>
+                        <p class="ref-role">Géographe, expert associé à la CBLT — spécialiste du foncier agricole</p>
+                        <p class="ref-role-alt">Économiste statisticien / Data analyste, RAF au Ministère de l'Eau et de l'Énergie</p>
+                        <dl class="ref-contact">
+                            <div><dt>Tél.</dt><dd>+235 66 33 67 66 · +235 90 92 97 80</dd></div>
                             <div><dt>Email</dt><dd><a href="mailto:teumobepabong@gmail.com">teumobepabong@gmail.com</a></dd></div>
                         </dl>
                     </article>
-                    <article class="reference-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Dr Djimta Raoul</h3>
-                        <p class="reference-role">Informaticien - géomaticien.</p>
-                        <dl class="reference-contact">
-                            <div><dt>Téléphone</dt><dd><a href="tel:+23565889106">+235 65 88 91 06</a></dd></div>
+
+                    <article class="ref-card">
+                        <h3>Dr. Djimta Raoul</h3>
+                        <p class="ref-role">Informaticien — Géomaticien</p>
+                        <dl class="ref-contact">
+                            <div><dt>Tél.</dt><dd>+235 65 88 91 06</dd></div>
                             <div><dt>Email</dt><dd><a href="mailto:djimtar@gmail.com">djimtar@gmail.com</a></dd></div>
                         </dl>
                     </article>
                 </div>
-                <p class="integrity-note references-note" data-aos="fade-up">Le CV mentionne également un contact au ministère de l'Eau et de l'Énergie (profil économiste / data) ; coordonnées complètes à reprendre sur votre exemplaire signé du CV si besoin.</p>
             </div>
         </section>
 
-        <!-- ======================= Contact Section ======================= -->
-        <section id="contact" class="contact">
+        <!-- CONTACT -->
+        <section id="contact" class="section section-contact">
             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Contact</span>
-                    <h2 class="section-title">Contactez-moi</h2>
-                    <p class="section-subtitle">Discutons de votre projet ou de vos besoins en formation</p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info" data-aos="fade-right">
-                        <div class="contact-intro glass-card">
-                            <h3>Prêt à collaborer ?</h3>
-                            <p>Que vous ayez besoin d'une expertise en géomatique, d'une formation sur mesure ou du développement d'une solution SIG, je suis à votre écoute pour vous accompagner.</p>
-                            <div class="contact-stats">
-                                <div class="contact-stat">
-                                    <i class="fas fa-envelope-open-text"></i>
-                                    <div>
-                                        <strong>Contact direct</strong>
-                                        <span>Courriel ou téléphone pour échanges professionnels</span>
-                                    </div>
-                                </div>
-                                <div class="contact-stat">
-                                    <i class="fas fa-handshake"></i>
-                                    <div>
-                                        <strong>Collaboration</strong>
-                                        <span>Cadrage des besoins et proposition de modalités</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-methods glass-card">
-                            <h4>Méthodes de Contact</h4>
-                            <div class="contact-method">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <strong>Email</strong>
-                                    <a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-method">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <strong>Téléphone</strong>
-                                    <a href="tel:+23568275851">+235 68275851</a>
-                                </div>
-                            </div>
-                            <div class="contact-method">
-                                <div class="contact-icon">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <strong>WhatsApp</strong>
-                                    <a href="https://wa.me/23568275851" target="_blank">Discuter maintenant</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="social-section glass-card">
-                            <h4>Profils publics</h4>
-                            <div class="social-links">
-                                <a href="https://www.linkedin.com/in/mounkang-souloukna/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
-                                    <i class="fab fa-linkedin-in"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                                <a href="https://github.com/souloukn/site" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
-                                    <i class="fab fa-github"></i>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form-container" data-aos="fade-left">
-                        <form class="contact-form glass-card" action="https://formspree.io/f/mgvylkvl" method="POST">
-                            <div class="form-header">
-                                <h3>Envoyez-moi un message</h3>
-                                <p>Décrivez votre projet et je vous recontacterai rapidement</p>
-                            </div>
-                            <div class="form-body">
-                                <div class="form-group">
-                                    <label for="name">Nom complet *</label>
-                                    <input type="text" id="name" name="Nom" required placeholder="Votre nom complet">
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="email">Email *</label>
-                                        <input type="email" id="email" name="Email" required placeholder="votre@email.com">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="phone">Téléphone</label>
-                                        <input type="tel" id="phone" name="Téléphone" placeholder="+235 XX XX XX XX">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="subject">Sujet *</label>
-                                    <select id="subject" name="Sujet" required>
-                                        <option value="" disabled selected>Sélectionnez un sujet...</option>
-                                        <option value="Consultation SIG">Consultation SIG/Géomatique</option>
-                                        <option value="Formation">Formation personnalisée</option>
-                                        <option value="Developpement">Développement de solution</option>
-                                        <option value="Collaboration">Collaboration/Partenariat</option>
-                                        <option value="Autre">Autre</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="budget">Budget estimé</label>
-                                    <select id="budget" name="Budget">
-                                        <option value="">Sélectionnez une fourchette...</option>
-                                        <option value="< 1000€">Moins de 1000€</option>
-                                        <option value="1000€ - 5000€">1000€ - 5000€</option>
-                                        <option value="5000€ - 10000€">5000€ - 10000€</option>
-                                        <option value="> 10000€">Plus de 10000€</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message *</label>
-                                    <textarea id="message" name="Message" rows="5" required placeholder="Décrivez votre projet, vos besoins ou posez vos questions ici..."></textarea>
-                                </div>
-                                <div class="form-group checkbox-group">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="Newsletter" value="Oui">
-                                        <span class="checkmark"></span>
-                                        Je souhaite recevoir la newsletter avec des conseils géomatique
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-footer">
-                                <div class="form-status"></div>
-                                <button type="submit" class="btn btn-primary btn-glow submit-btn">
-                                    <i class="fas fa-paper-plane"></i>
-                                    <span>Envoyer le message</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+                <header class="section-head">
+                    <span class="section-num">06</span>
+                    <h2 class="section-title">Prendre contact</h2>
+                    <p class="section-kicker">Pour discuter d'une mission, d'une collaboration ou d'une formation.</p>
+                </header>
 
-    <!-- ======================= Footer ======================= -->
-    <footer class="footer">
-        <div class="footer-background">
-            <div class="footer-pattern"></div>
-        </div>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <h3>Mounkang Souloukna</h3>
-                        <p>Géomaticien, développeur SIG, enseignant &amp; formateur</p>
-                    </div>
-                    <p class="footer-description">Enseignement à l'Université de Mongo, missions INSEED / CECISIG, enquêtes et recherche appliquée au Tchad. Contenus de formation en ligne.</p>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/mounkang-souloukna/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/souloukn/site" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul class="footer-links">
-                        <li><a href="#apropos">À propos</a></li>
-                        <li><a href="#competences">Compétences</a></li>
-                        <li><a href="#experience">Parcours</a></li>
-                        <li><a href="#expertise-appliquee">Expertise</a></li>
-                        <li><a href="#references">Références</a></li>
-                        <li><a href="#produits">Formations</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Direct</h4>
-                    <div class="footer-contact">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>N'Djamena, Tchad</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+23568275851">+235 68275851</a>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <dl>
+                            <div>
+                                <dt>Email</dt>
+                                <dd><a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a></dd>
+                            </div>
+                            <div>
+                                <dt>Téléphone &amp; WhatsApp</dt>
+                                <dd><a href="tel:+23568275851">+235 68 27 58 51</a></dd>
+                            </div>
+                            <div>
+                                <dt>Localisation</dt>
+                                <dd>N'Djamena, Tchad</dd>
+                            </div>
+                            <div>
+                                <dt>Délai de réponse</dt>
+                                <dd>Sous 24 h en moyenne</dd>
+                            </div>
+                        </dl>
+
+                        <div class="contact-social">
+                            <a href="https://www.linkedin.com/in/mounkang-souloukna/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/mounkangsouloukna" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i><span>GitHub</span>
+                            </a>
+                            <a href="https://wa.me/23568275851" target="_blank" rel="noopener" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Newsletter</h4>
-                    <p>Recevez les dernières actualités et conseils en géomatique</p>
-                    <form class="newsletter-form">
-                        <div class="newsletter-input">
-                            <input type="email" placeholder="Votre email" required>
-                            <button type="submit" aria-label="S'abonner">
+
+                    <form class="contact-form" action="https://formspree.io/f/mgvylkvl" method="POST">
+                        <div class="field">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="Nom" required placeholder="Votre nom et fonction">
+                        </div>
+                        <div class="field">
+                            <label for="org">Organisation</label>
+                            <input type="text" id="org" name="Organisation" placeholder="Institution, ONG, université…">
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="Email" required placeholder="votre@email.org">
+                            </div>
+                            <div class="field">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="Téléphone" placeholder="+xxx xx xx xx xx">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="subject">Objet</label>
+                            <select id="subject" name="Sujet" required>
+                                <option value="" disabled selected>Sélectionner…</option>
+                                <option value="Mission cartographie / SIG">Mission cartographie / SIG</option>
+                                <option value="Enquête et collecte de données">Enquête et collecte de données</option>
+                                <option value="Télédétection / Webmapping">Télédétection / Webmapping</option>
+                                <option value="Formation sur mesure">Formation sur mesure</option>
+                                <option value="Collaboration de recherche">Collaboration de recherche</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="Message" rows="5" required placeholder="Présentez brièvement le contexte de la demande, la zone géographique et le calendrier envisagé."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <span>Envoyer le message</span>
                                 <i class="fas fa-paper-plane"></i>
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>© 2026 Mounkang Souloukna. Tous droits réservés.</p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Mentions légales</a>
-                        <a href="#">Politique de confidentialité</a>
-                        <a href="#">CGV</a>
-                    </div>
-                </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="foot-brand">Mounkang Souloukna</p>
+                <p class="foot-tag">Géomaticien · Cartographe · Enseignant universitaire</p>
             </div>
+            <div>
+                <p class="foot-label">Contact</p>
+                <p>
+                    <a href="mailto:mounkangsouloukna@gmail.com">mounkangsouloukna@gmail.com</a><br>
+                    <a href="tel:+23568275851">+235 68 27 58 51</a><br>
+                    N'Djamena, Tchad
+                </p>
+            </div>
+            <div>
+                <p class="foot-label">Navigation</p>
+                <ul class="foot-links">
+                    <li><a href="#apropos">Profil</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#projets">Missions</a></li>
+                    <li><a href="assets/documents/CV.pdf" download>CV (PDF)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container foot-bottom">
+            <p>© 2026 Mounkang Souloukna. Tous droits réservés.</p>
+            <p>Conçu et codé à N'Djamena.</p>
         </div>
     </footer>
 
-    <!-- ======================= Back to Top ======================= -->
-    <button id="backToTop" class="back-to-top" aria-label="Retour en haut de la page">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <a href="#accueil" class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-    <!-- ======================= Scripts ======================= -->
-    <!-- AOS Animation Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-    <!-- Gumroad Script -->
-    <script src="https://gumroad.com/js/gumroad.js"></script>
-    
-    <!-- Main Script -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
